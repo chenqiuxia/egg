@@ -40,8 +40,12 @@ module.exports = appInfo => {
   config.view = {
     defaultExtension: '.pug',
     defaultViewEngine: 'pug',
-    mapping: { '.pug': 'pug' }
+    mapping: { '.pug': 'pug', '.tpl': 'nunjucks' }
   };
+  config.news = {
+    pageSize: 5,
+      serverUrl: 'https://hacker-news.firebaseio.com/v0'
+  }
 
   //connect shenkong
   // config.SKAPI='http://124.161.16.235:8280/integral-web/app';

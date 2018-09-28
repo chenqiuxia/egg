@@ -1,6 +1,7 @@
 'use strict';
 module.exports = app => {
-
+    app.get('/', 'home.index')
+    app.get('/news', 'news.list')
     app.get('/admin/api/test', 'test.getbaidu');
     app.get('/admin/api/people', 'people.list');
     app.get('/admin/api/people/:id', 'people.show');
